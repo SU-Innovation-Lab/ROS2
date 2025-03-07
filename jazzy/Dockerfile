@@ -1,8 +1,3 @@
+# Description: Dockerfile for running ROS2 on Ubuntu 20.04 with a RPi
+
 FROM ubuntu
-
-COPY . /app
-
-CMD python ./test/docker_test.py
-
-
-
