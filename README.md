@@ -12,7 +12,7 @@
     <img src="etc/gif/ROS2.gif" alt="GIF Image" width="150"/>
 </p>
 
-[About](#about) • [Requirements](#requirements) • [Setup](#setup) • [Directory](#directory)
+[About](#about) • [Requirements](#requirements) • [Setup](#setup) • [Directory](#directory) • [Maintenance](#maintenance)
 
 This repository acts as a guide for installing and configuring ROS2 on a Raspberry Pi [RPi] 5 device running the Ubuntu 22.04+ LTS operating system.
 
@@ -80,3 +80,22 @@ You should see the talker saying it's publishing messages and the listener sayin
 ### 📁 /etc
 
 This folder contains items (images, gifs, videos) used for visual purposes.
+
+## Maintenance
+
+### Git Branch
+
+[3.1 Git Branching - Branches in a Nutshell
+](https://git-scm.com/book/en/v2/Git-Branching-Branches-in-a-Nutshell)
+
+When making edits to the repository, it is good practice to newver commit directly to the main branch. Instead, create an additional branch that will be easy to identiy for your personal edits.
+
+```bash
+# a common branch name can be firstname.lastname
+git checkout -b *branch-name
+```
+
+Basic idea to commiting:
+1. Create a new personal branch
+2. Make commits and push to such branch
+3. Submit review to respority maintaners for compare and pull request to main branch
