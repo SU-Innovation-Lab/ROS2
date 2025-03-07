@@ -23,6 +23,10 @@ In order for the setup.sh script to run without any configurations required, the
 - Raspberry Pi 5 (either 4 or 8 GB) with power source 
 - 16 GB (minimum) microSD card with Ubuntu latest LTS flash
 - Display device along with mouse + keyboard for the RPi
+-- If you've setup a local user and password for the RPi during OS configuration, you can simply ssh into the RPi without the need for an external display via your laptop using the following command:
+```bash
+ssh username@ip
+```
 
 ### Congifuring the Ubuntu flash
 
@@ -51,7 +55,6 @@ chmod +rwx setup.sh
 
 After the RPi starts back up and the ros2_venv enviornment is active, test that ROS2 has been correctly installed on the device by running the following commands in __two seperate terminal windows__:
 
-
 ```bash
 # Talker terminal
 source /opt/ros/jazzy/setup.bash
@@ -72,7 +75,6 @@ You should see the talker saying it's publishing messages and the listener sayin
 
 - __setup.sh__: This script installs ROS2 and all of its required dependencies onto the local Raspberry Pi 5 device. It sets up a Python virtual environment, installs necessary Python packages, and configures the system for ROS2.
 
-
 ### 📁 /docs
 
 - __README.md__: This file. Provides an overview of the repository, setup instructions, and a directory of scripts and configuration files.
@@ -85,8 +87,7 @@ This folder contains items (images, gifs, videos) used for visual purposes.
 
 ### Git Branch
 
-[3.1 Git Branching - Branches in a Nutshell
-](https://git-scm.com/book/en/v2/Git-Branching-Branches-in-a-Nutshell)
+[3.1 Git Branching - Branches in a Nutshell](https://git-scm.com/book/en/v2/Git-Branching-Branches-in-a-Nutshell)
 
 When making edits to the repository, it is good practice to newver commit directly to the main branch. Instead, create an additional branch that will be easy to identiy for your personal edits.
 
@@ -96,6 +97,7 @@ git checkout -b *branch-name
 ```
 
 Basic idea to commiting:
+
 1. Create a new personal branch
 2. Make commits and push to such branch
 3. Submit review to respority maintaners for compare and pull request to main branch
